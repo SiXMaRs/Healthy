@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+
 import streamlit as st
 import pandas as pd
 from sklearn.linear_model import LinearRegression
@@ -514,9 +514,7 @@ with tab3:
         df = pd.read_csv('Video/calorie.csv')
         st.write('"Success"')
         st.dataframe(df)
-        fig, ax = plt.subplots()
-        df.plot.scatter(x='Weight', y='Calories', ax=ax)
-        st.pyplot(fig)
+    
     train = colum[1].button('ฝึกประเมินแคลอรี่')
     if train:
         st.write('กำลังฝึกประเมินแคลอรี่')
